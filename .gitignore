@@ -3,9 +3,9 @@ node_modules
 .pnpm-store
 
 # Build outputs
-/dist
-/build
-/dist-ssr
+dist
+build
+dist-ssr
 
 # PNPM specific
 pnpm-debug.log*
