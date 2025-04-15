@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 
-export default function TabButton({ children, onClick, isSelected }) {
+export default function TabButton({ children, isSelected, ...props }) {
 	return (
 		<li>
-			<button className={isSelected ? "active" : ""} onClick={onClick}>
+			<button className={isSelected ? "active" : ""} {...props}>
 				{children}
 			</button>
 		</li>
@@ -13,6 +13,5 @@ export default function TabButton({ children, onClick, isSelected }) {
 // Prop type validation
 TabButton.propTypes = {
 	children: PropTypes.node.isRequired,
-	onClick: PropTypes.func.isRequired,
 	isSelected: PropTypes.bool.isRequired
 };
