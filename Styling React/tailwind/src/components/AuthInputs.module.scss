@@ -1,0 +1,27 @@
+.accountButton {
+	@apply text-amber-400;
+
+	&:hover {
+		@apply text-amber-500;
+	}
+}
+
+.authInputs {
+	@apply w-full max-w-sm p-8 mx-auto rounded shadow-md bg-gradient-to-b from-stone-700 to-stone-800;
+}
+
+.inputs {
+	@apply flex flex-col gap-2 mb-6;
+}
+
+.submit {
+	@apply flex justify-end gap-4;
+}
+
+.submitButton {
+	@apply px-4 py-2 font-semibold uppercase rounded text-stone-900 bg-amber-400;
+
+	&:hover {
+		@apply bg-amber-500 scale-105;
+	}
+}

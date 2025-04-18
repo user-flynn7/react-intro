@@ -1,14 +1,8 @@
 import { useState } from "react";
-import { styled } from "styled-components";
+
+import styles from "./AuthInputs.module.scss";
 
 import CusotomInput from "./Input";
-
-const ControlDiv = styled.div`
-	display: flex;
-	flex-direction: column;
-	gap: 0.5rem;
-	margin-bottom: 1.5rem;
-`;
 
 export default function AuthInputs() {
 	const [enteredEmail, setEnteredEmail] = useState("");
@@ -31,8 +25,8 @@ export default function AuthInputs() {
 	const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
 	return (
-		<div id="auth-inputs">
-			<ControlDiv>
+		<div id="auth-inputs" className={styles.authInputs}>
+			<div className={styles.inputs}>
 				<CusotomInput
 					label="Email"
 					invalid={emailNotValid}
@@ -49,12 +43,12 @@ export default function AuthInputs() {
 						handleInputChange("password", event.target.value)
 					}
 				/>
-			</ControlDiv>
-			<div className="actions">
-				<button type="button" className="text-button">
+			</div>
+			<div className={styles.submit}>
+				<button type="button" className={styles.accountButton}>
 					Create a new account
 				</button>
-				<button className="button" onClick={handleLogin}>
+				<button className={styles.submitButton} onClick={handleLogin}>
 					Sign In
 				</button>
 			</div>

@@ -1,0 +1,24 @@
+/* input.module.css */
+.inputBase {
+	@apply w-full px-3 py-2 leading-tight border rounded shadow;
+}
+
+.inputInvalid {
+	@apply text-red-500 bg-red-100 border-red-700;
+}
+
+.inputValid {
+	@apply text-gray-700 bg-stone-300;
+}
+
+.labelBase {
+	@apply block mb-2 text-xs font-bold tracking-wide uppercase;
+}
+
+.labelInvalid {
+	@apply text-red-400;
+}
+
+.labelValid {
+	@apply text-stone-300;
+}
